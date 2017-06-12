@@ -13,8 +13,15 @@
         "dist/js/bootstrap.js",
         "dist/css/bootstrap.min.css"
       ]
+    },
+      "fontawesome": {
+    "main": [
+    "./scss/font-awesome.scss",
+    "./fonts/*"
+    ]
     }
   },
+
   "devDependencies": {
     "chai": "^4.0.0",
     "mocha": "^3.4.2"
