@@ -1,0 +1,59 @@
+.card {
+  @include card-props;
+}
+
+#first-card {
+    margin-left: 60px;
+  @media (max-width: 768px) {
+    margin-left:8%;
+  }
+}
+
+.homepage-info-card {
+  margin-top: 40px;
+  background-color: white;
+  h2 {
+    color: $color-prim;
+    margin-bottom: 24px;
+  }
+  p {
+    color: $text-grey;
+    font-size: 16px;
+  }
+}
+
+.mini-card {
+background-color: white;
+margin-bottom: 30px;
+color: $text-grey;
+font-size: 16px;
+
+ h4 {
+  margin-bottom: 16px;
+  color: $color-prim;
+ }
+}
+
+#contact-card {
+  position: absolute;
+  width:80%;
+    @media (min-width: 768px) {
+    right:-250px;
+    top:50px;
+  }
+  @media (max-width: 768px) {
+    display:block;
+    width:120%;
+    margin-top: 10px;
+    position:static;
+    margin-bottom: -150px;
+  }
+  p{
+  color: white;
+  position:relative;
+  margin-left: 50px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  }
+  @include grad-prim;
+}
