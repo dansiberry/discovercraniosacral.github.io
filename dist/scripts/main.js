@@ -1,0 +1,1 @@
+"use strict";function openMenu(){var e=document.getElementById("mobile-menu-section");"0px"===e.style.height?e.style.height="200px":e.style.height="0px"}
