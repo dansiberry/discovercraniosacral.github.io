@@ -1,7 +1,44 @@
 #mobile-menu-section {
   height:0px;
+  opacity: 0;
   overflow: hidden;
   transition: 0.5s;
+   background-color: #56a3d8;
+  .mobile-menu {
+    padding-left: 0px;
+  }
+  ul {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+    height:100%;
+    // padding-top: 5px;
+    // padding-bottom: 5px;
+    font-size: 24px;
+    margin-bottom: 0px;
+    a{
+    width:100%;
+    flex-grow:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+    border-top:1px white solid;
+    }
+  }
+  li {
+    list-style:none;
+    color: white;
+    font-weight: 600;
+    width:100%;
+    text-align: center;
+    // padding-top: 10px;
+  }
+  #about-li {
+    border:none;
+    padding-top: 0px;
+  }
 }
 
 #frontpage-banner{
@@ -37,7 +74,7 @@
       border-radius: 5px;
     }
   }
-    @media (max-width: 500px) {
+    @media (max-width: 800px) {
       h1 {
         font-size: 30px;
       }
@@ -55,6 +92,8 @@
       font-size: 28px;
       font-style: italic;
       line-height: 1.3;
+      // font-family: 'Paletino-Italic';
+      // font-family: 'Paletino-BoldItalic';
     }
 }
 
@@ -86,26 +125,37 @@
   top:30px;
   color:white;
   padding:6%;
-  h2 {
-    width:350px;
-  }
-}
 
-@media (max-width: 992px) {
-  #background-title {
-      top:20px;
+  @media (max-width: 992px) {
+    top:20px;
     h2 {
-      width:250px;
+      width:300px;
+    }
+  }
+  @media (max-width: 768px) {
+    bottom:-30px;
+    right:15%;
+    left:15%;
+    h2 {
+      width:400px;
+    }
+  }
+
+  @media (max-width: 510px) {
+    right:10%;
+    left:10%;
+    h2 {
+      width:230px;
     }
   }
 }
 
-@media (max-width: 768px) {
-  #background-title {
-    right:20%;
-    left:20%;
+#about-section {
+  @media (max-width: 768px) {
+  margin-top: 90px;
   }
 }
+
 
 #treatment-card-left {
   margin-top: 180px;
@@ -192,6 +242,10 @@
   position:absolute;
   left:-50px;
   font-size: 25px;
+}
+
+#fees-section {
+  margin-bottom: 50px;
 }
 
 #fees-section {

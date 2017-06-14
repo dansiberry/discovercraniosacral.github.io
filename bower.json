@@ -14,11 +14,12 @@
         "dist/css/bootstrap.min.css"
       ]
     },
-      "fontawesome": {
-    "main": [
-    "./scss/font-awesome.scss",
-    "./fonts/*"
-    ]
+    "components-font-awesome": {
+      "main": [
+        "scss/font-awesome.scss",
+        "css/font-awesome.min.css",
+        "fonts/*"
+      ]
     }
   },
 

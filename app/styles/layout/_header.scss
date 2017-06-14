@@ -77,6 +77,20 @@ nav {
     color:white;
     padding-right: 15px;
   }
+  .mobile-contact-button {
+  display:none;
+  }
+  @media (max-width: 460px) {
+    right:-10px;
+    left:-10px;
+    span, i {
+      display: none;
+    }
+    .mobile-contact-button span , .mobile-contact-button i, .mobile-contact-button {
+      display:inline-block;
+      text-align: center;
+    }
+   }
   .header-contact-skew {
     z-index: -1;
     @include grad-prim;
@@ -87,8 +101,21 @@ nav {
     left:-20px;
     top:0px;
     transform: skewX(20deg);
+    @media (max-width: 460px) {
+    display:none;
+    }
   }
     @media (max-width: 768px) {
     right:-5px;
   }
+}
+
+  .mobile-contact-button {
+  width:49%;
+  display:flex;
+  justify-content: center;
+  }
+
+#mobile-email-button {
+  border-right: 1px solid white;
 }

@@ -36,15 +36,26 @@ font-size: 16px;
 
 #contact-card {
   position: absolute;
-  width:80%;
-    @media (min-width: 768px) {
-    right:-250px;
+  width:70%;
+
+  @media (max-width: 6000px) {
+    right:-290px;
+    top:50px;
+  }
+    @media (max-width: 1000px) {
+    right:-190px;
+    top:50px;
+  }
+
+  @media (max-width: 860px) {
+    right:-200px;
+    width:80%;
     top:50px;
   }
   @media (max-width: 768px) {
     display:block;
     width:120%;
-    margin-top: 10px;
+    margin-top: 50px;
     position:static;
     margin-bottom: -150px;
   }
@@ -54,6 +65,7 @@ font-size: 16px;
   margin-left: 50px;
   margin-bottom: 15px;
   font-size: 16px;
+  word-wrap:break-word;
   }
   @include grad-prim;
 }
