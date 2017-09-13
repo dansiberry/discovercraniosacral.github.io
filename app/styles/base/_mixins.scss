@@ -9,15 +9,15 @@
 }
 
 @mixin box-shadow() {
--webkit-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.15);
--moz-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.15);
-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.15);
+// -webkit-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.15);
+// -moz-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.15);
+box-shadow: 10px 10px 27px 0px rgba(0,0,0,0.05);
 }
 
 @mixin box-shadow-header() {
--webkit-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.05);
--moz-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.05);
-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.05);
+// -webkit-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.05);
+// -moz-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.05);
+box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.02);
 }
 
 @mixin card-props() {

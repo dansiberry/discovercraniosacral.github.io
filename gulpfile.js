@@ -9,7 +9,7 @@ const runSequence = require('run-sequence');
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
-var dev = true;
+var dev = false;
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
@@ -81,6 +81,11 @@ gulp.task('fonts', () => {
   return gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function (err) {})
     .concat('app/fonts/**/*'))
     .pipe($.if(dev, gulp.dest('.tmp/fonts'), gulp.dest('dist/fonts')));
+});
+
+gulp.task('icons', function() { 
+    return gulp.src(config.bowerDir + '/fontawesome/fonts/**.*') 
+        .pipe(gulp.dest('./public/fonts')); 
 });
 
 gulp.task('extras', () => {
@@ -167,7 +172,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['wiredep','lint', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

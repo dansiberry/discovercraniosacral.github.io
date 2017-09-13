@@ -18,6 +18,7 @@
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/application.css">
+    <link rel="stylesheet" href="/bower_components/components-font-awesome/css/font-awesome.min.css" />
     <!-- endbuild -->
 
     <!-- build:js scripts/vendor/modernizr.js -->
@@ -31,7 +32,7 @@
         <ul class="hidden-xs">
          <a href="#about-section"><li>About</li></a>
          <a href="#contact-section"><li>Contact</li></a>
-         <a href="#fees-section"><li>Fees</li></a>
+         <a href="#treatment-cards"><li>Treatment</li></a>
         </ul>
         <ul class="visible-xs">
           <i class="fa fa-bars" id="menu-icon" onclick="openMenu()" aria-hidden="true"></i>
@@ -44,7 +45,7 @@
           <span>info@discovercraniosacral.com</span>
           <i class="fa fa-phone" aria-hidden="true"></i>
           <span>087 283 1187</span>
-          <a href="mailto:info@thefriendlydentist.ie">
+          <a onclick="toggleModal()">
             <div class="mobile-contact-button" id="mobile-email-button">
               <i class="fa fa-envelope" aria-hidden="true"></i>
               <span>Email us</span>
@@ -65,7 +66,7 @@
         <ul class="mobile-menu">
          <a href="#about-section"><li id="about-li">About</li></a>
          <a href="#contact-section"><li>Contact</li></a>
-         <a href="#fees-section"><li>Fees</li></a>
+         <a href="#treatment-cards"><li>Treatment</li></a>
         </ul>
       </section>
       <section id="frontpage-banner" >
@@ -75,7 +76,7 @@
                 <div class="col-xs-12 col-sm-7 col-md-8 no-padding-mobile">
                   <div id="jumbo-header">
                      <h1>Discover the gentle approach to vitality and wellbeing</h1>
-                     <button id="homepage-main-button" class="outline">Book now</button>
+                     <button id="homepage-main-button" onclick="toggleModal()" class="outline">Book now</button>
                   </div>
                 </div>
                 <div class="col-sm-5 hidden-xs col-md-4">
@@ -86,11 +87,11 @@
            <div class="row no-side-margin-mobile">
               <div class="col-xs-12 no-padding-mobile">
                 <div class="col-xs-12 col-sm-5 col-md-4 no-padding-mobile mobile-image-section">
-                  <img src="images/baby.jpg" alt="">
+                  <img src="images/baby33.jpg" alt="">
                 </div>
                 <div class="col-xs-12 col-sm-7 col-md-8 no-padding-mobile">
                   <div id="sub-jumbo-header">
-                    <h3>Helping your body to balance and restore itself.</h3>
+                    <h3>Helping your body to relax, repair and restore itself.</h3>
                   </div>
                 </div>
               </div>
@@ -98,10 +99,12 @@
         </div>
       </section>
 
-      <section class="card homepage-info-card col-xs-10 animation-element slide-right" id="first-card">
+      <section class="card homepage-info-card col-xs-10 col-sm-9 animation-element slide-right margin-offset" id="first-card">
             <h2>What is craniosacral therapy?</h2>
-            <p>Craniosacral therapy uses gentle movements to calm the nervous system and address imbalances in your body’s rythym. This is done through light touches on the back of the head and shoulders. </p>
-            <button class="outline">Try it today</button>
+            <p>Biodynamic Craniosacral Therapy is a non-invasive treatment that supports the health of the whole being, especially the nervous system. Craniosacral touch is profound and sets off a deep physiological reaction in the body. </p>
+            <h2>How craniosacral therapy works</h2>
+            <p>Performed on a treatment table, the client is fully clothed and the touch is light and still. The therapist connects with the underlying forces of health and engages the natural self-repair mechanisms of the body. </p>
+            <button class="outline" onclick="toggleModal()">Try it today</button>
       </section>
 
       <section class="col-xs-12" id="treatment-cards">
@@ -109,29 +112,30 @@
           <h2>How can it help me?</h2>
         </div>
         <div class="col-xs-12 col-sm-6 no-padding-right no-padding-left">
-          <div class="col-xs-11 mini-card card animation-element slide-left" id="treatment-card-left">
-            <h4>Recovering from an injury</h4>
-            <p>therapy is for people of all ages and walks of life. If you’re suffering with health problems or a stressful lifestyle then it is an ideal</p>
+          <div class="col-xs-11 mini-card card animation-element slide-left margin-offset" id="treatment-card-left">
+            <h4>Chronic pain and Fatigue</h4>
+            <p>Craniosacral Therapy provides support so you can live life to your full potential, unhindered by chronic pain, low energy and recurring illnesses. Patterns of tension, strain and resistance are resolved and balance is restored.</p>
           </div>
         </div>
         <div class="col-xs-12 col-sm-6 no-padding-right no-padding-left">
-          <div class="col-xs-11 col-xs-offset-1 card mini-card animation-element slide-left">
-            <h4>Babies and mothers</h4>
-            <p>therapy is for people of all ages and walks of life. If you’re suffering with health problems or a stressful lifestyle then it is an ideal</p>
+          <div class="col-xs-11 col-xs-offset-1 card mini-card animation-element slide-left margin-offset">
+            <h4>Mothers and Babies</h4>
+            <p>Craniosacral Therapy is a great support during pregnancy and aids recovery after birth. Babies respond really well to the treatment, especially if they have issues with feeding, digestion or sleeping.</p>
           </div>
-          <div class="col-xs-11 card mini-card animation-element slide-left">
-            <h4>Anxiety and stress</h4>
-            <p>therapy is for people of all ages and walks of life. If you’re suffering with health problems or a stressful lifestyle then it is an ideal</p>
+          <div class="col-xs-11 card mini-card animation-element slide-left margin-offset">
+            <h4>Stress related illness</h4>
+            <p>By bringing clients' awareness into their own bodies and surroundings, craniosacral Therapy regulates the autonomic nervous system and helps release stress. The therapy provides a deep sense of resourcing within the client, giving them a safe container for emotional issues to resolve.
+            </p>
           </div>
         </div>
       </section>
-      <section id="about-section" class="card col-xs-10 col-xs-offset-1 col-md-offset-1 homepage-info-card animation-element slide-right">
+      <section id="about-section" class="card col-xs-10 col-xs-offset-1 col-md-offset-1 homepage-info-card animation-element slide-right margin-offset">
             <h2>About the Practice</h2>
               <div class="block-quote">
                 <h4>Your body knows best</h4>
                 <img src="images/quote.png" id="start-quote" alt="">
-                <p>There is always something to learn from your body. Craniosacral has shown me that I can heal myself and help others do the same. </br></br>
-                Allowing for gentle changes to take place can be more powerful than forcing things to change. I’ve experienced firsthand how this approach can transform how we think of our body. </p>
+                <p>Craniosacral Therapy brings relaxation to a deeper level as we become aware of how we are feeling moment to moment during a session. It allows for gentle changes to take place, which can be more powerful than forcing things to change. When we create this space for the body, we allow it to move towards health.
+                 </p>
                 <img src="images/quote.png" class="flip" id="end-quote" alt="">
               </div>
             <div class="author-box row">
@@ -145,7 +149,7 @@
             </div>
       </section>
 
-      <section class="card col-xs-10 col-xs-offset-1 col-sm-offset-0 col-md-offset-1 col-sm-9 homepage-info-card animation-element slide-left" id="contact-section">
+      <section class="card col-xs-10 col-xs-offset-1 col-sm-offset-0 col-md-offset-1 col-sm-9 homepage-info-card animation-element slide-left margin-offset" id="contact-section">
         <h2>Get in touch</h2>
         <p>Finding a relaxing space to heal is important. Get in contact and we answer all your questions and concerns in confidentiality.</p>
         <h4>Click to enlarge map</h4>
@@ -155,12 +159,12 @@
           <p><i class="fa fa-envelope contact-icon" aria-hidden="true"></i>28 Clarinda Park West, </br> Dun Laoghaire, Dublin</p>
           <p><i class="fa fa-phone contact-icon" aria-hidden="true"></i>087 2831187</p>
           <p><i class="fa fa-map-marker contact-icon" aria-hidden="true"></i>info@discovercraniosacral.com</p>
-          <button class="white-outline">Send a message</button>
+          <button onclick="toggleModal()" class="white-outline">Send a message</button>
         </div>
         </div>
       </section>
 
-      <section class="card col-xs-10 col-xs-offset-1 col-sm-9 homepage-info-card animation-element slide-right" id="fees-section">
+      <section style="display: none;" class="card col-xs-10 col-xs-offset-1 col-sm-9 homepage-info-card animation-element slide-right margin-offset" id="fees-section">
         <h2>Special offers & fees</h2>
         <h4>Refer a friend</h4>
         <p>Free gift voucher for each new client to give to a friend. </p>
@@ -169,7 +173,23 @@
         <h4>Full session</h4>
         <p>Normal fee - €60</p>
       </section>
-
+      <div class="form-wrapper">
+        <section id="form-modal" class=" custom-hide">
+          <button onclick="toggleModal()" class="close-modal">
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </button>
+          <h2>Get in touch</h2>
+          <p>Leave your deatils and we'll reply to your message to arrange an appointment.</p>
+          <div class="form-container">
+            <form method="POST" action="http://formspree.io/info@discovercraniosacral.com">
+               <input type="email" name="email" placeholder="Your email">
+               <textarea name="message" placeholder="Your message"></textarea>
+               <button class = "outline" type="submit">Send</button>
+           </form>
+          </div>
+        </section>
+      </div>
+    <div onclick="toggleModal()" id="grey-background" class="custom-hide"></div>
     </div>
   </body>
 

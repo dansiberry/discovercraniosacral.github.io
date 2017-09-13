@@ -15,8 +15,17 @@ body {
   margin:0px;
 }
 
+.custom-hide {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+.custom-remove {
+  margin-left: -999999px;
+}
+
 .no-padding {
-  padding:0px;
+  padding:0px !important;
 }
 
 .no-padding-right {
